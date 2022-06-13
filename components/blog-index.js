@@ -21,7 +21,7 @@ export default function BlogIndex({ more = "Read more" }) {
   })
 
   return routePages.map((page, idx, arr) => {
-    console.log(page.route + "=>" + (page.frontMatter?.date || 0))
+    // console.log(page.route + "=>" + (page.frontMatter?.date || 0))
 
     if (idx >= MAX_POST_SIZE) {
       console.log("文章已到达上限=>" + MAX_POST_SIZE)
