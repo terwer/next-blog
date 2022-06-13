@@ -10,5 +10,5 @@ git config user.name "terwer"
 git config user.email "youweics@163.com"
 git add -A
 git commit -m "${msg}"
-git push $srcgithubUrl main:main # 推送到github main分支
+git push $srcgithubUrl develop:develop # 推送到github main分支
 echo "next blog deploy finished."
