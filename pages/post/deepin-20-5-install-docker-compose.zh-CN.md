@@ -1,29 +1,26 @@
 ---
-title: Deepin20.5 安装 docker 与 docker-compose
 date: 2022-05-30 20:27:00
-permalink: /post/deepin-20-5-install-docker-compose.html
-meta:
-  - name: keywords
-    content: docker compose deepin
-  - name: description
-    content: Deepin20.5安装docker与docker-compose。
-categories:
-  - 实用技巧
+description: docker和docker-compose是目前最流行的容器工具，今天我们来探索如何在deepin20.5系统上安装和使用。
 tags:
   - docker
   - compose
   - deepin
-author: 
-  name: terwer
-  link: https://github.com/terwer
+  - 
 ---
+
+import Callout from "nextra-theme-docs/callout";
+import Authors, { Author } from 'components/authors'
+
 # Deepin20.5 安装 docker 与 docker-compose
 
-:::tip 文章更新历史
+<Authors date="2022年5月30日 20时27分00秒">
+    <Author name="terwer" link="https://github.com/terwer" />
+</Authors>
 
+<Callout emoji="💡">
+文章更新历史<br/>
 2022/05/29 fix:Deepin 20.6也验证通过。
-
-:::
+</Callout>
 
 ## 卸载旧版本
 
@@ -107,7 +104,7 @@ sudo usermod -aG docker username
 systemctl start docker
 ```
 
-# 禁止开机自启
+## 禁止开机自启
 
 默认情况下 docker 是开机自启的，如果我们想禁用开机自启，可以通过安装 chkconfig 命令来管理 Deepin 自启项：
 

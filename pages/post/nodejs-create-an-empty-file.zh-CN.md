@@ -1,5 +1,5 @@
 ---
-title: NodeJS创建一个空文件
+description: 本文介绍了NodeJS创建空文件的方法。
 date: 2022-04-28 21:32:35
 permalink: /post/nodejs-create-an-empty-file.html
 categories:

@@ -1,0 +1,14 @@
+{
+  "index": {
+    "title": "简介",
+    "type": "page",
+    "hidden": true
+  },
+  "post": {
+    "title": "博客",
+    "type": "page",
+    "theme": {
+      "sidebar": false
+    }
+  }
+}
