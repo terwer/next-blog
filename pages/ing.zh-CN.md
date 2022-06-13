@@ -7,4 +7,4 @@ searchable: false
 
 import IngIndex from '../components/ing-index'
 
-<IngIndex />
+<IngIndex more="阅读更多"/>
