@@ -7,7 +7,9 @@
     "dev": "next",
     "debug": "NODE_OPTIONS='--inspect' next",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "push": "bash push.sh",
+    "p": "bash push.sh"
   },
   "author": "Shu Ding",
   "license": "Apache-2.0",

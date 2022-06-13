@@ -4,6 +4,13 @@
     "type": "page",
     "hidden": true
   },
+  "ing": {
+    "title": "随笔",
+    "type": "page",
+    "theme": {
+      "sidebar": false
+    }
+  },
   "post": {
     "title": "博客",
     "type": "page",

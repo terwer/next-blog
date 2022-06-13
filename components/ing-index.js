@@ -1,11 +1,11 @@
 import { getPagesUnderRoute } from "nextra/context";
 import { formatDate } from "../utils/util"
 import Link from "next/link";
-const MAX_POST_SIZE = 99;
-
+const MAX_ING_SIZE = 99;
 
 export default function BlogIndex({ more = "Read more" }) {
-  const routePages = getPagesUnderRoute("/post");
+  const routePages = getPagesUnderRoute("/ing");
+
   // 按照时间排序
   routePages.sort(function (x, y) {
     const now = new Date();
@@ -21,10 +21,8 @@ export default function BlogIndex({ more = "Read more" }) {
   })
 
   return routePages.map((page, idx, arr) => {
-    console.log(page.route + "=>" + (page.frontMatter?.date || 0))
-
-    if (idx >= MAX_POST_SIZE) {
-      console.log("文章已到达上限=>" + MAX_POST_SIZE)
+    if (idx >= MAX_ING_SIZE) {
+      console.log("随笔已到达上限")
       return false;
     }
 
