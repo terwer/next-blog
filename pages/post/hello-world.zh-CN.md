@@ -22,7 +22,7 @@ import Authors, { Author } from 'components/authors'
 2022/05/29 fix:Deepin 20.6也验证通过。
 </Callout>
 
-大约两年前，我们 [开源了](https://twitter.com/vercel/status/1188911002626097157) SWR——广受大家喜爱的小巧 React 数据请求库。今天，我们迎来了另一个里程碑：SWR 1.0 版本发布了！
+大约两年前，我们 [开源了](https://twitter.com/vercel/status/1188911002626097157) SWR——广受大家喜爱的小巧 React 数据请求库。今天，我们迎来了另一个里程碑：SWR 1.1 版本发布了！
 
 ## 新变化
 
