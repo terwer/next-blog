@@ -11,6 +11,13 @@
       "sidebar": false
     }
   },
+  "note": {
+    "title": "笔记",
+    "type": "page",
+    "theme": {
+      "sidebar": true
+    }
+  },
   "post": {
     "title": "博客",
     "type": "page",

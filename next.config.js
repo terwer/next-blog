@@ -16,6 +16,11 @@ module.exports = withNextra({
         source: "/docs",
         destination: "/docs/getting-started",
         statusCode: 301,
+      },
+      {
+        source: "/note",
+        destination: "/note/framework/mybatis/001-jdbc-problem-analysis",
+        statusCode: 301,
       }
     ];
   },
