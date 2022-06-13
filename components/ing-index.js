@@ -21,10 +21,10 @@ export default function BlogIndex({ more = "Read more" }) {
   })
 
   return routePages.map((page, idx, arr) => {
-    if (idx >= MAX_ING_SIZE) {
-      console.log("随笔已到达上限")
-      return false;
-    }
+    // if (idx >= MAX_ING_SIZE) {
+    //   console.log("随笔已到达上限")
+    //   return false;
+    // }
 
     // Alias `<a>` to avoid it being replaced by MDX components.
     const A = "a";
