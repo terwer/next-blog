@@ -14,5 +14,6 @@ date: 2022-06-14 00:41:12
 - [Cnblogs](https://cnblogs.com/tangyouwei)
 - [CSDN](http://blog.csdn.net/youweics)
 - 微信公众号
+- 语雀
 
 4、按月总结。
