@@ -18,21 +18,21 @@ import Authors, { Author } from 'components/authors'
 
 <Callout emoji="💡">
 文章更新历史<br/>
-2022/05/29 fix:统信UOS 21.3家庭版验证通过。<br/>
+2022/06/14 fix:统信UOS 21.3家庭版验证通过。<br/>
 2022/05/29 fix:Deepin 20.6验证通过。
 </Callout>
 
 ## 卸载旧版本
 
 ```bash
-sudo apt-get remove docker.io docker-engine
+sudo apt remove docker.io docker-engine
 ```
 
 ## 安装秘钥管理工具
 
 ```bash
-sudo apt-get install software-properties-common
-sudo apt-get install apt-transport-https ca-certificates curl
+sudo apt install software-properties-common
+sudo apt install apt-transport-https ca-certificates curl
 ```
 
 为了确认所下载软件包的合法性，需要添加软件源的 GPG 密钥。
@@ -80,8 +80,8 @@ deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/debian buster stabl
 ## 安装 docker 以及 docker-compose
 
 ```bash
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-compose
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-compose
 ```
 
 ## 让普通用户也可运行 docker
@@ -138,7 +138,7 @@ sudo docker ps
 ### 安装指定版本
 
 ```bash
-$ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin
+$ sudo apt install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin
 ```
 ### 禁止开机自启
 
@@ -147,7 +147,7 @@ $ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING>
 1. 安装 chkconfig
 
    ```bash
-   sudo apt-get install chkconfig
+   sudo apt install chkconfig
    ```
 
 2. 移除自启
