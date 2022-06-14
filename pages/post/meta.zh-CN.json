@@ -4,5 +4,5 @@
   "nodejs-create-an-empty-file": "NodeJS创建一个空文件",
   "friend-links":"友情链接",
   "js-remove-t-and-z-in-date":"JS去除日期date格式化中的T和Z",
-  "nodejs-using-ed25519-realize-encrypt-and-decrypt":"使用nodejs实现ed25519的公钥加密和私钥"
+  "nodejs-using-ed25519-realize-encrypt-and-decrypt":"使用nodejs实现ed25519的公钥加密和私钥解密"
 }

@@ -3,22 +3,70 @@ date: 2022-06-14 14:31:20
 description: 使用nodejs实现ed25519的公钥加密和私钥解密。
 ---
 
-主要使用了crypto库
+主要使用了ed25519库
 
 加解密和验证代码
 
 ```javascript
-const crypto = require('crypto');
+// Common.js and ECMAScript Modules (ESM)
+import * as ed from '@noble/ed25519';
+// If you're using single file, use global variable instead: `window.nobleEd25519`
 
-const { publicKey, privateKey } = crypto.generateKeyPairSync('ed25519');
+const verifyEd = async function (prikey, pubkey) {
+    console.log("你输入的私钥是：" + prikey)
+    console.log("环境变量中的公钥是：" + pubkey)
 
-const message = 'Hello world!';
-console.log(message);
+    // ====================
+    // 新私钥开始
+    // ====================
+    // const newPrivateKey = ed.utils.randomPrivateKey();
+    // const privateKeyStr = Buffer.from(newPrivateKey).toString('base64');
+    // console.log("new privateKey=>", privateKeyStr)
+    // ====================
+    // 新私钥结束
+    // ====================
+  
+    const privateKeyStr = prikey
 
-const signature = crypto.sign(null, Buffer.from(message), privateKey);
-console.log(signature);
+    const privateKey = Buffer.from(privateKeyStr, 'base64');
+    // console.log("parsed privateKey=>", privateKey)
 
-const verified = crypto.verify(null, Buffer.from(message), publicKey, signature)
-console.log('Match:', verified);
+    // ====================
+    // 新公钥开始
+    // ====================
+    // const newPublicKey = await ed.getPublicKey(privateKey);
+    // const publicKeyStr = Buffer.from(newPublicKey).toString('base64');
+    // console.log("new publicKey=>", publicKeyStr)
+    // ====================
+    // 新公钥结束
+    // ====================
+  
+    const publicKeyStr = pubkey
+
+    const publicKey = Buffer.from(publicKeyStr, 'base64');
+    // console.log("parsed publicKey=>", publicKey)
+
+    try {
+        const valiPass = "123456";
+        const message = Uint8Array.from(valiPass, x => x.charCodeAt(0))
+        // const messageStr = Buffer.from(message).toString('base64');
+        // console.log("校验密码：", valiPass)
+
+        const signature = await ed.sign(message, privateKey);
+        const isValid = await ed.verify(signature, message, publicKey);
+        // console.log("验证结果：", isValid ? "有效" : "无效")
+        return isValid;
+    } catch (e) {
+        console.warn("校验失败，请检查密码", e)
+        return false;
+    }
+}
+
+const privateKeyStr = "prikey";
+const publicKeyStr = "pubkey"
+const valiResult = verifyEd(privateKeyStr, publicKeyStr)
+valiResult.then(function(item){
+    console.log("item=>", item)
+})
 ```
 
