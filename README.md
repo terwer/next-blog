@@ -1,6 +1,6 @@
 # next-blog
 
-my next blog using nextra, visit: [https://note.terwergreen.com](https://note.terwergreen.com)
+my next blog using nextra, inspired by https://github.com/vercel/swr-site, visit: [https://note.terwergreen.com](https://note.terwergreen.com)
 
 To develop it locally, clone this repository and run the following command to start the local dev server:
 
