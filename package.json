@@ -1,6 +1,10 @@
 {
   "scripts": {
-    "next": "next"
+    "next": "next",
+    "dev": "next",
+    "debug": "NODE_OPTIONS='--inspect' next",
+    "start": "next start",
+    "build": "next build"
   },
   "dependencies": {
     "next": "^13.0.6",
