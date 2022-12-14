@@ -1,1 +1,0 @@
-print("sync is starting...")
